@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080d">
+  <title>2D Transform Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>2D Transform Animation</h1>
+    <div class="workspace">
+      <section class="gallery" aria-label="Hover each card to preview a 2D transform">
+        <article class="card translate">
+          <div class="shape"></div><h2>TRANSLATE</h2>
+        </article>
+        <article class="card scale">
+          <div class="shape"></div><h2>SCALE</h2>
+        </article>
+        <article class="card rotate">
+          <div class="shape"></div><h2>ROTATE</h2>
+        </article>
+        <article class="card skew">
+          <div class="shape"></div><h2>SKEW</h2>
+        </article>
+        <article class="card matrix">
+          <div class="shape"></div><h2>MATRIX</h2>
+        </article>
+        <article class="card combined">
+          <div class="shape"></div><h2>COMBINED</h2>
+        </article>
+      </section>
+
+      <aside class="source">
+        <h2>CSS Source</h2>
+        <pre><code>.shape {
+  transition:
+    transform 0.6s
+    cubic-bezier(0.34,
+    1.56, 0.64, 1);
+  will-change:
+    transform;
+}
+
+.card:hover .shape {
+  transform:
+    translate(40px, -30px);
+}</code></pre>
+        <p class="hint">Hover over each card to see its transform.</p>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
